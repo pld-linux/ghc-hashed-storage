@@ -7,6 +7,11 @@ Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/hashed-storage/0.4.3/hashed-storage-%{version}.tar.gz
 # Source0-md5:	a8427578dc13006689158cd9f2c90e56
 URL:		http://hackage.haskell.org/package/hashed-storage/
+BuildRequires:	haskell
+BuildRequires:	haskell-binary
+BuildRequires:	haskell-dataenc
+BuildRequires:	haskell-mmap
+BuildRequires:	haskell-zlib
 ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -29,6 +34,9 @@ runhaskell Setup.hs build
 %install
 rm -rf $RPM_BUILD_ROOT
 runhaskell Setup.hs copy --destdir=$RPM_BUILD_ROOT
+
+%clean
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
