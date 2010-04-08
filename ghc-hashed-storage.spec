@@ -1,5 +1,5 @@
 Summary:	Hashed file storage support code
-Name:		haskell-hashed-storage
+Name:		ghc-hashed-storage
 Version:	0.4.3
 Release:	0.1
 License:	BSD
@@ -7,11 +7,11 @@ Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/hashed-storage/0.4.3/hashed-storage-%{version}.tar.gz
 # Source0-md5:	a8427578dc13006689158cd9f2c90e56
 URL:		http://hackage.haskell.org/package/hashed-storage/
-BuildRequires:	haskell
-BuildRequires:	haskell-binary
-BuildRequires:	haskell-dataenc
-BuildRequires:	haskell-mmap
-BuildRequires:	haskell-zlib
+BuildRequires:	ghc
+BuildRequires:	ghc-binary
+BuildRequires:	ghc-dataenc
+BuildRequires:	ghc-mmap
+BuildRequires:	ghc-zlib
 ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
