@@ -2,7 +2,7 @@
 Summary:	Hashed file storage support code
 Name:		ghc-%{pkgname}
 Version:	0.5.2
-Release:	0.1
+Release:	1
 License:	BSD
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkgname}-%{version}.tar.gz
@@ -16,7 +16,7 @@ BuildRequires:	ghc-zlib
 %requires_eq	ghc
 Requires:	ghc-binary
 Requires:	ghc-dataenc
-Requires:	ghc-mmap >= 1:0.5
+%requires_eq	ghc-mmap
 Requires:	ghc-zlib
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
