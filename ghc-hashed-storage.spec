@@ -13,10 +13,10 @@ BuildRequires:	ghc-binary
 BuildRequires:	ghc-dataenc
 BuildRequires:	ghc-mmap >= 1:0.5
 BuildRequires:	ghc-zlib
-%requires_eq	ghc
+%requires_releq	ghc
 Requires:	ghc-binary
 Requires:	ghc-dataenc
-%requires_eq	ghc-mmap
+%requires_releq	ghc-mmap
 Requires:	ghc-zlib
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
