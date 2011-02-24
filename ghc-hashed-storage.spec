@@ -1,4 +1,4 @@
-%define	pkgname	hashed-storage
+%define		pkgname	hashed-storage
 Summary:	Hashed file storage support code
 Name:		ghc-%{pkgname}
 Version:	0.5.2
@@ -7,20 +7,19 @@ License:	BSD
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkgname}-%{version}.tar.gz
 # Source0-md5:	9173f18fc672dab4e05d38092d5e7dc6
-URL:		http://hackage.haskell.org/package/%{pkgname}/
+URL:		http://hackage.haskell.org/package/hashed-storage/
 BuildRequires:	ghc >= 6.12.3
 BuildRequires:	ghc-binary
 BuildRequires:	ghc-dataenc
 BuildRequires:	ghc-mmap >= 1:0.5
 BuildRequires:	ghc-zlib
+BuildRequires:	rpmbuild(macros) >= 1.608
 %requires_releq	ghc
 Requires:	ghc-binary
 Requires:	ghc-dataenc
 %requires_releq	ghc-mmap
 Requires:	ghc-zlib
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		ghcdir		ghc-%(/usr/bin/ghc --numeric-version)
 
 %description
 Support code for reading and manipulating hashed file storage (where
@@ -61,10 +60,10 @@ runhaskell Setup.hs register \
 rm -rf $RPM_BUILD_ROOT
 
 %post
-/usr/bin/ghc-pkg recache
+%ghc_pkg_recache
 
 %postun
-/usr/bin/ghc-pkg recache
+%ghc_pkg_recache
 
 %files
 %defattr(644,root,root,755)
