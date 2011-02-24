@@ -2,7 +2,7 @@
 Summary:	Hashed file storage support code
 Name:		ghc-%{pkgname}
 Version:	0.5.2
-Release:	2
+Release:	3
 License:	BSD
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkgname}-%{version}.tar.gz
