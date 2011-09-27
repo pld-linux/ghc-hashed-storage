@@ -8,13 +8,11 @@ Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkgname}-%{version}.tar.gz
 # Source0-md5:	31abd73fc4566e04b056fc22acdec2aa
 URL:		http://hackage.haskell.org/package/hashed-storage/
-BuildRequires:	ghc >= 6.12.3
-BuildRequires:	ghc-binary
+BuildRequires:	ghc >= 7.2
 BuildRequires:	ghc-dataenc
 BuildRequires:	ghc-mmap >= 1:0.5
 BuildRequires:	ghc-zlib
 BuildRequires:	rpmbuild(macros) >= 1.608
-Requires:	ghc-binary
 Requires:	ghc-dataenc
 Requires:	ghc-zlib
 %requires_eq	ghc
