@@ -1,12 +1,12 @@
 %define		pkgname	hashed-storage
 Summary:	Hashed file storage support code
 Name:		ghc-%{pkgname}
-Version:	0.5.2
-Release:	4
+Version:	0.5.8
+Release:	1
 License:	BSD
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkgname}-%{version}.tar.gz
-# Source0-md5:	9173f18fc672dab4e05d38092d5e7dc6
+# Source0-md5:	31abd73fc4566e04b056fc22acdec2aa
 URL:		http://hackage.haskell.org/package/hashed-storage/
 BuildRequires:	ghc >= 6.12.3
 BuildRequires:	ghc-binary
