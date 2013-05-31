@@ -1,12 +1,12 @@
 %define		pkgname	hashed-storage
 Summary:	Hashed file storage support code
 Name:		ghc-%{pkgname}
-Version:	0.5.8
+Version:	0.5.10
 Release:	1
 License:	BSD
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkgname}-%{version}.tar.gz
-# Source0-md5:	31abd73fc4566e04b056fc22acdec2aa
+# Source0-md5:	67d8661d191d4b7a8f3ac801783eca87
 URL:		http://hackage.haskell.org/package/hashed-storage/
 BuildRequires:	ghc >= 7.2
 BuildRequires:	ghc-dataenc
@@ -62,8 +62,9 @@ install -d $RPM_BUILD_ROOT%{_libdir}/%{ghcdir}/package.conf.d
 runhaskell Setup.hs copy --destdir=$RPM_BUILD_ROOT
 
 # work around automatic haddock docs installation
-rm -rf %{name}-%{version}-doc
+%{__rm} -rf %{name}-%{version}-doc
 cp -a $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}/html %{name}-%{version}-doc
+%{__rm} -r $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
 
 runhaskell Setup.hs register \
 	--gen-pkg-config=$RPM_BUILD_ROOT/%{_libdir}/%{ghcdir}/package.conf.d/%{pkgname}.conf
